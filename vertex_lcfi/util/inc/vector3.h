@@ -39,6 +39,7 @@ Simple 3 Vector class
 
         // Default constructor
         Vector3();
+        Vector3 (const Vector3&) = default;
         // Construction and assignment from a ublas vector expression or copy assignment
 	template<typename R> Vector3(const boost::numeric::ublas::vector_expression<R>& r) : Base_Vector(r) 
 	{
