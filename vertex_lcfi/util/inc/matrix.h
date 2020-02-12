@@ -35,6 +35,7 @@ namespace util
         SymMatrix2x2()
             : Base_Matrix(2)
         {}
+        SymMatrix2x2(const SymMatrix2x2&) = default;
                 // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> SymMatrix2x2(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
         // template<typename R> void operator=(const boost::numeric::ublas::matrix_expression<R>& r)
@@ -59,6 +60,7 @@ namespace util
         Matrix2x2()
             : Base_Matrix(2,2)
         {}
+        Matrix2x2 (const Matrix2x2&) = default;
 
         // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> Matrix2x2(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
@@ -84,6 +86,8 @@ namespace util
         Matrix3x3()
             : Base_Matrix(3,3)
         {}
+
+        Matrix3x3 (const Matrix3x3&) = default;
 
         // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> Matrix3x3(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
@@ -175,6 +179,7 @@ namespace util
         SymMatrix5x5()
             : Base_Matrix(5)
         {}
+        SymMatrix5x5(const SymMatrix5x5&) = default;
                 // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> SymMatrix5x5(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
         // template<typename R> SymMatrix5x5& operator=(const boost::numeric::ublas::matrix_expression<R>& r)
@@ -198,7 +203,9 @@ namespace util
         SymMatrix3x3()
             : Base_Matrix(3)
         {}
-                // Construction and assignment from a ublas matrix expression or copy assignment
+      SymMatrix3x3(const SymMatrix3x3&) = default;
+
+      // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> SymMatrix3x3(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
         // template<typename R> void operator=(const boost::numeric::ublas::matrix_expression<R>& r)
         // {
