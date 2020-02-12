@@ -278,7 +278,7 @@ void RPCutProcessor::processEvent( LCEvent * evt ) {
 		{
 			RelCol = evt->getCollection( _MonteCarloRelationColName );
 		}
-		catch( lcio::Exception exception )
+		catch( const lcio::Exception& exception )
 		{
 			// Don't want to quit, so don't do much here. Just ignore MC PID cuts and apply the other cuts.
 			// Print a warning though.
@@ -320,7 +320,7 @@ void RPCutProcessor::processEvent( LCEvent * evt ) {
 	OutRPCollection = evt->getCollection(_OutRCPColName);
 	if (_WriteNewCollection && !_SubParticleLists)
 	{
-		dynamic_cast<LCCollectionVec*>(OutRPCollection)->setSubset(true);
+		dynamic_cast<LCCollectionVec&>(*OutRPCollection).setSubset(true);
 	}
 	
 	
@@ -583,7 +583,7 @@ bool RPCutProcessor::_MCPIDFail( lcio::ReconstructedParticle* RPTrack, UTIL::LCR
 	}
 	else
 	{
-		std::vector<lcio::MCParticle*> Parents = dynamic_cast<lcio::MCParticle*>(RelatedMCParticles[0])->getParents();
+		std::vector<lcio::MCParticle*> Parents = dynamic_cast<lcio::MCParticle&>(*RelatedMCParticles[0]).getParents();
 		
 		if (Parents.empty())
 			return false;
