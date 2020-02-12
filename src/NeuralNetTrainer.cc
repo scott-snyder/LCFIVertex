@@ -396,7 +396,7 @@ bool NeuralNetTrainerProcessor::_passesCuts( lcio::LCEvent* pEvent )
 			jetMomentums.push_back( vertex_lcfi::util::Vector3( mom[0], mom[1], mom[2] ) );
 		}
 	}
-	catch( lcio::Exception exception )
+	catch( const lcio::Exception& exception )
 	{
 		//Just print a warning and proceed with the other cuts.
 		if( numWarningsNoMomentum<=2 )
@@ -512,7 +512,7 @@ void NeuralNetTrainerProcessor::_trainNet( nnet::BackPropagationCGAlgorithm& bac
 		//something in here to cut out early if the errors aren't getting significantly
 		//smaller (e.g. "if( (CurrErr-PrevErr)/PrevErr < 0.02 ) breakLoop=true")
 		std::vector<double> epochErrors=backPropCGAlgo.getTrainingErrorValuesPerEpoch();
-		CurrErr=epochErrors.back();
+		CurrErr=epochErrors.empty()?0:epochErrors.back();
 		//PrevErr = CurrErr;
 
 		// 26/Apr/07 - Been having problems with the net not training and getting a NAN
