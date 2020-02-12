@@ -91,6 +91,7 @@ namespace util
             : Base_Matrix(3,3)
         {}
 
+
         // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> Matrix3x3(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
         // template<typename R> void operator=(const boost::numeric::ublas::matrix_expression<R>& r)
@@ -219,7 +220,8 @@ namespace util
         SymMatrix3x3()
             : Base_Matrix(3)
         {}
-                // Construction and assignment from a ublas matrix expression or copy assignment
+
+      // Construction and assignment from a ublas matrix expression or copy assignment
         template<typename R> SymMatrix3x3(const boost::numeric::ublas::matrix_expression<R>& r) : Base_Matrix(r) {}
         // template<typename R> void operator=(const boost::numeric::ublas::matrix_expression<R>& r)
         // {

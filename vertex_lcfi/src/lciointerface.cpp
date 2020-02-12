@@ -314,8 +314,10 @@ ReconstructedParticle* addDecayChainToLCIOEvent(LCEvent* MyLCIOEvent, DecayChain
 	int nVerts = VertexCollection->getNumberOfElements()  ;
 	for(int i=0; i< nVerts && !PrimaryVertex ; i++)
 	{
-		if(dynamic_cast<lcio::Vertex*>(VertexCollection->getElementAt(i))->isPrimary())
-			PrimaryVertex = dynamic_cast<lcio::Vertex*>(VertexCollection->getElementAt(i));
+            if (auto* vert = dynamic_cast<lcio::Vertex*>(VertexCollection->getElementAt(i))) {
+		if(vert->isPrimary())
+			PrimaryVertex = vert;
+            }
 	}
 	
 	//If no primary found make one and add it to the vertex collection
