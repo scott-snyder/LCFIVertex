@@ -2599,7 +2599,7 @@ void LCFIAIDAPlotProcessor::FillZVRESTable(LCEvent* pEvent)
 	      //So at the moment I'll just use the first MCP in the list.  It will (should) give the same answer as any other. 
 	      
 	      lcio::MCParticle* MCP = dynamic_cast<lcio::MCParticle*>(RelatedMCParticles[0]);
-	      std::vector<lcio::MCParticle*> Parents = dynamic_cast<lcio::MCParticle*>(RelatedMCParticles[0])->getParents();
+	      std::vector<lcio::MCParticle*> Parents = dynamic_cast<lcio::MCParticle&>(*RelatedMCParticles[0]).getParents();
 	      
 	      if (Parents.empty())
 		std::cerr << " In " << __FILE__ << "(" << __LINE__ << "), run number: " << pEvent->getRunNumber() << ", event number: " <<  pEvent->getEventNumber()<< " : MCP has no parents" << std::endl;
