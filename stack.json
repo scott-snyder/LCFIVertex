@@ -1,11 +1,11 @@
 {
   "version": 5,
-  "prev": "86f07370dbf8d59afcfc5d6a8be3dcc702b4f9d0",
+  "prev": "17aaa96da1fd51e5f6da04ea6470e7e2663ab815",
   "head": "c1be2e660b66e87af509ad66f7018e8b3f8fb001",
   "applied": [
     "gitignore",
     "cmake",
-    "fix-compilation-warnings"
+    "warn"
   ],
   "unapplied": [],
   "hidden": [],
@@ -16,7 +16,7 @@
     "cmake": {
       "oid": "d3afd30369e434a199ff7e57f7005089acbef3bd"
     },
-    "fix-compilation-warnings": {
+    "warn": {
       "oid": "c1be2e660b66e87af509ad66f7018e8b3f8fb001"
     }
   }
