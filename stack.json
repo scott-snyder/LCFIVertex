@@ -1,10 +1,10 @@
 {
   "version": 5,
-  "prev": "111dac2dc6df9fff7623426724d73f8d35ce0832",
+  "prev": "5d5d9fca64300748a066b1a6e0da8100c9ad50cc",
   "head": "d3afd30369e434a199ff7e57f7005089acbef3bd",
   "applied": [
     "gitignore",
-    "cmake-fix-needed-to-properly"
+    "cmake"
   ],
   "unapplied": [],
   "hidden": [],
@@ -12,7 +12,7 @@
     "gitignore": {
       "oid": "482b943a19fc3ce14cce7b59a9ddda2afdae0e16"
     },
-    "cmake-fix-needed-to-properly": {
+    "cmake": {
       "oid": "d3afd30369e434a199ff7e57f7005089acbef3bd"
     }
   }
