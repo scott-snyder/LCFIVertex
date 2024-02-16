@@ -1,6 +1,0 @@
-Bottom: 726d708a7828435ff329f3cc9c70200f7eef12b6
-Top:    8bd00a52b6567120c69c11e6a67ef7a809b57d4a
-Author: scott snyder <sss@karma>
-Date:   2020-02-12 11:38:12 -0500
-
-cmake fix (needed to properly pick up txml library)
