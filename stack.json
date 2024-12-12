@@ -1,7 +1,7 @@
 {
   "version": 5,
-  "prev": "a75a786e9e07314d5d5fc221ee225ae82af4fd23",
-  "head": "ca436553142a4abcd6b58b58be2437433d6cefd6",
+  "prev": "72865ce5d9a3d51c166ae7e8189b5105291512cb",
+  "head": "ddbb803d739307e005f8826b7b4365b92ad6a379",
   "applied": [
     "gitignore",
     "warn",
@@ -11,7 +11,7 @@
   "hidden": [],
   "patches": {
     "gccbug-new12": {
-      "oid": "ca436553142a4abcd6b58b58be2437433d6cefd6"
+      "oid": "ddbb803d739307e005f8826b7b4365b92ad6a379"
     },
     "gitignore": {
       "oid": "4f7991f31d6c8fae25d3cd4dd12c8bafbcd41a5f"
