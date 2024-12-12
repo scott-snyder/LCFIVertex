@@ -512,6 +512,7 @@ void NeuralNetTrainerProcessor::_trainNet( nnet::BackPropagationCGAlgorithm& bac
 		//something in here to cut out early if the errors aren't getting significantly
 		//smaller (e.g. "if( (CurrErr-PrevErr)/PrevErr < 0.02 ) breakLoop=true")
 		std::vector<double> epochErrors=backPropCGAlgo.getTrainingErrorValuesPerEpoch();
+                if (epochErrors.empty()) std::abort();
 		CurrErr=epochErrors.back();
 		//PrevErr = CurrErr;
 
