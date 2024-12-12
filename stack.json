@@ -1,14 +1,18 @@
 {
   "version": 5,
-  "prev": "f388a356d1e5f6c59beded589aef6f17443b5427",
-  "head": "dfbf2ad333aea7d3ecb1914dea910eb84c87cded",
+  "prev": "a75a786e9e07314d5d5fc221ee225ae82af4fd23",
+  "head": "ca436553142a4abcd6b58b58be2437433d6cefd6",
   "applied": [
     "gitignore",
-    "warn"
+    "warn",
+    "gccbug-new12"
   ],
   "unapplied": [],
   "hidden": [],
   "patches": {
+    "gccbug-new12": {
+      "oid": "ca436553142a4abcd6b58b58be2437433d6cefd6"
+    },
     "gitignore": {
       "oid": "4f7991f31d6c8fae25d3cd4dd12c8bafbcd41a5f"
     },
