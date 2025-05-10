@@ -22,6 +22,7 @@
 #include <vector>
 #include <string>
 #include <map>
+#include <cmath>
 
 #ifdef __APPLE__
 #define uint uint32_t
@@ -431,7 +432,7 @@ float TrueAngularJetFlavourProcessor::chargefromPDG(int code)
     {
       code  = code%1000;
     }
-  if(fabs(code) >1000)
+  if(std::abs(code) >1000)
     {
       first = (code/1000) %2;
       second = (code/100) %2;
