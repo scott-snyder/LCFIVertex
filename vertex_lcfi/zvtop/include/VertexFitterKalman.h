@@ -67,7 +67,6 @@ namespace vertex_lcfi
       double      fVtxGuess[3];
  
       int         fNDF=0;
-      int         fQ=0; // to be kept? vertex charge?
       double      fChi2=0.0;
           
     };    

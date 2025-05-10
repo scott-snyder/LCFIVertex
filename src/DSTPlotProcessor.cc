@@ -224,7 +224,7 @@ bool DSTPlotProcessor::_passesJetCuts( ReconstructedParticle* pJet )
 
 	jetMomentum.makeUnit();
 	double cosTheta=jetMomentum.dot( zAxis );
-	if( fabs(cosTheta)<=CThJ_lower || fabs(cosTheta)>=CThJ_upper ) return false;
+	if( std::abs(cosTheta)<=CThJ_lower || std::abs(cosTheta)>=CThJ_upper ) return false;
 
 
 	// If control gets to this point then the jet has passed
@@ -517,42 +517,42 @@ void DSTPlotProcessor::_checkDSTParameters( LCEvent* pEvent)
 
 	     
 	     float ep = 0.00001;
-	     if(fabs( dstBTag -fullBTag) > ep)
+	     if(std::abs( dstBTag -fullBTag) > ep)
 	       cout<<"B Parameters not equal"<<endl;
-	     if(fabs( dstCTag -fullCTag) > ep)
+	     if(std::abs( dstCTag -fullCTag) > ep)
 	       cout<<"C Parameters not equal"<<endl;
-	     if(fabs( dstBCTag -fullBCTag) > ep) 
+	     if(std::abs( dstBCTag -fullBCTag) > ep) 
 	       cout<<"BC Parameters not equal"<<endl;
 	       
 	       
-	     if(fabs( dstTruePDGCode -fullTruePDGCode) > ep)
+	     if(std::abs( dstTruePDGCode -fullTruePDGCode) > ep)
 	       cout<<"TPDG Parameters not equal"<<endl;
-	     if(fabs( dstTruePartonCharge -fullTruePartonCharge) > ep)
+	     if(std::abs( dstTruePartonCharge -fullTruePartonCharge) > ep)
 	       cout<<"TP Parameters not equal"<<endl;
-	     if(fabs( dstTrueHadronChange-fullTrueHadronCharge) > ep)
+	     if(std::abs( dstTrueHadronChange-fullTrueHadronCharge) > ep)
 	       cout<<"TH Parameters not equal"<<endl;
-	     if(fabs( dstTrueJetFlavour -fullTrueJetFlavour) > ep)
+	     if(std::abs( dstTrueJetFlavour -fullTrueJetFlavour) > ep)
 	       cout<<"TJ Parameters not equal"<<endl;
-	     if(fabs( dstNumVertices -fullNumVertices) > ep)
+	     if(std::abs( dstNumVertices -fullNumVertices) > ep)
 	       cout<<"NV Parameters not equal"<<endl;
 
 	     if(dstNumVertices > 1)
 	       {
-		 if(fabs( dstJointProbRPhi -fullJointProbRPhi) > ep)
+		 if(std::abs( dstJointProbRPhi -fullJointProbRPhi) > ep)
 		   cout<<"JPRP Parameters not equal"<<endl;
-		 if(fabs( dstJointProbZ -fullJointProbZ) > ep)
+		 if(std::abs( dstJointProbZ -fullJointProbZ) > ep)
 		   cout<<"JPZ Parameters not equal"<<endl;
-		 if(fabs( dstNumTracksInVertices -fullNumTracksInVertices) > ep)
+		 if(std::abs( dstNumTracksInVertices -fullNumTracksInVertices) > ep)
 		   cout<<"NT Parameters not equal"<<endl;
-		 if(fabs( dstDecayLength -fullDecayLength) > ep)
+		 if(std::abs( dstDecayLength -fullDecayLength) > ep)
 		   cout<<"DL Parameters not equal"<<endl;
-		 if(fabs( dstDecayLengthSignificance -fullDecayLengthSignificance) > ep)
+		 if(std::abs( dstDecayLengthSignificance -fullDecayLengthSignificance) > ep)
 		   cout<<"DLS Parameters not equal"<< dstDecayLengthSignificance -fullDecayLengthSignificance<<endl;
-		 if(fabs( dstRawMomentum -fullRawMomentum) > ep)
+		 if(std::abs( dstRawMomentum -fullRawMomentum) > ep)
 		   cout<<"raw p Parameters not equal"<<endl;
-		 if(fabs( dstPTCorrectedMass -fullPTCorrectedMass) > ep)
+		 if(std::abs( dstPTCorrectedMass -fullPTCorrectedMass) > ep)
 		   cout<<"pt cor Parameters not equal"<<endl;
-		 if(fabs( dstSecondaryVertexProbability -fullSecondaryVertexProbability) > ep)
+		 if(std::abs( dstSecondaryVertexProbability -fullSecondaryVertexProbability) > ep)
 		   cout<<"sv Parameters not equal "<<endl;
 	       }
 
