@@ -1,0 +1,10 @@
+Bottom: d885983ec01f3dac457d6231faaf3a510998a6ba
+Top:    d885983ec01f3dac457d6231faaf3a510998a6ba
+Author: sss <sss@karma>
+Date:   2025-05-10 15:25:50 -0400
+
+Fix clang warnings.
+
+ - Use C++-style struct declaration, rather than a typedef.
+ - Unused variables/data members.
+ - Use std::abs instead of fabs.
