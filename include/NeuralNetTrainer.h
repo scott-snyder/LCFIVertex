@@ -76,10 +76,10 @@ public:
 	NeuralNetTrainerProcessor();
 	virtual ~NeuralNetTrainerProcessor();
 	virtual void init();
-	virtual void processRunHeader( LCRunHeader* pRun );
-	virtual void processEvent( LCEvent* pEvent );
+	virtual void processRunHeader( lcio::LCRunHeader* pRun );
+	virtual void processEvent( lcio::LCEvent* pEvent );
 	//don't need this
-	//virtual void check( LCEvent* pEvent );
+	//virtual void check( lcio::LCEvent* pEvent );
 	virtual void end();
 protected:
 	//variables for the steering file options
