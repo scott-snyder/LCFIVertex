@@ -29,21 +29,21 @@ INCLUDE( ilcsoft_default_settings )
 
 
 FIND_PACKAGE( Marlin 1.0 REQUIRED ) # minimum required Marlin version
-INCLUDE_DIRECTORIES( SYSTEM ${Marlin_INCLUDE_DIRS} )
+INCLUDE_DIRECTORIES( ${Marlin_INCLUDE_DIRS} )
 ADD_DEFINITIONS( ${Marlin_DEFINITIONS} )
 
 FIND_PACKAGE( LCIO REQUIRED )
-INCLUDE_DIRECTORIES( SYSTEM ${LCIO_INCLUDE_DIRS} )
+INCLUDE_DIRECTORIES( ${LCIO_INCLUDE_DIRS} )
 ADD_DEFINITIONS( ${LCIO_DEFINITIONS} )
 
 FIND_PACKAGE( MarlinUtil REQUIRED ) # minimum required Marlin version
-INCLUDE_DIRECTORIES( SYSTEM ${MarlinUtil_INCLUDE_DIRS} )
+INCLUDE_DIRECTORIES( ${MarlinUtil_INCLUDE_DIRS} )
 
 
 # optional package
 FIND_PACKAGE( AIDA )
 IF( AIDA_FOUND )
-    INCLUDE_DIRECTORIES( SYSTEM ${AIDA_INCLUDE_DIRS} )
+    INCLUDE_DIRECTORIES( ${AIDA_INCLUDE_DIRS} )
     ADD_DEFINITIONS( "-DMARLIN_USE_AIDA" )
     MESSAGE( STATUS "AIDA: ${AIDA_DIR}" )
 ELSE()
@@ -67,7 +67,7 @@ ENDIF()
 
 # -------------------- boost ------------------------------------------------------
 find_package( Boost REQUIRED )
-include_directories( SYSTEM ${Boost_INCLUDE_DIRS} )
+include_directories( ${Boost_INCLUDE_DIRS} )
 SET( LCFI_USE_EXTERNAL_BOOST 1)
 # ---------------------------------------------------------------------------------
 
