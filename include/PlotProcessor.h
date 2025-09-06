@@ -66,10 +66,10 @@ public:
 	PlotProcessor();
 	virtual ~PlotProcessor();
 	virtual void init();
-	virtual void processRunHeader( LCRunHeader* pRun );
-	virtual void processEvent( LCEvent* pEvent );
+	virtual void processRunHeader( lcio::LCRunHeader* pRun );
+	virtual void processEvent( lcio::LCEvent* pEvent );
 	//don't need this
-	//virtual void check( LCEvent* pEvent );
+	//virtual void check( lcio::LCEvent* pEvent );
 	virtual void end();
 protected:
 	std::string _JetCollectionName{};	/**< @internal The name of the collection of ReconstructedParticles that is the jet (comes from the steering file).*/
@@ -93,7 +93,7 @@ protected:
 	bool _passesEventCuts( lcio::LCEvent* pEvent );	///< @internal A function that contains all the event cuts - returns true if the event passes all of the cuts, false otherwise.
 	bool _passesJetCuts( lcio::ReconstructedParticle* pJet ); ///< @internal A function that contains all the jet cuts - returns true if the event passes all of the cuts, false otherwise.
 
-	void _fillPlots( LCEvent* pEvent, unsigned int jet);/**< @internal Internal function that is just code split off from processEvent() to simplify it - fills the container classes with the data from the file.*/
+	void _fillPlots( lcio::LCEvent* pEvent, unsigned int jet);/**< @internal Internal function that is just code split off from processEvent() to simplify it - fills the container classes with the data from the file.*/
 	void _outputDataToFile( std::string filename );/**< @internal Internal function that is just code split off from end() to simplify it - writes the required data from the container classes to the output file.*/
 
 	double _jetEMax=0.0;/**< @internal Keeps a record of the highest jet energy - gets printed to standard output at the end as a sanity check.*/

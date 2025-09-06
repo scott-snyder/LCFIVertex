@@ -20,6 +20,7 @@
 #include "nnet/inc/InputImportance.h"
 
 
+using namespace lcio;
 using std::set;
 using std::string;
 

@@ -22,6 +22,8 @@
 #include "nnet/inc/SigmoidNeuronBuilder.h"
 #include "nnet/inc/BackPropagationCGAlgorithm.h"
 
+using namespace lcio;
+
 //Needs to be instantiated for Marlin to know about it (I think)
 NeuralNetTrainerProcessor aNeuralNetTrainerProcessor;
 

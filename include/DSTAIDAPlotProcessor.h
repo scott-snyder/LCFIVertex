@@ -28,10 +28,10 @@ public:
 	DSTAIDAPlotProcessor& operator=(const DSTAIDAPlotProcessor&) = delete;
 	virtual ~DSTAIDAPlotProcessor();
 	virtual void init();
-	virtual void processRunHeader( LCRunHeader* pRun );
-	virtual void processEvent( LCEvent* pEvent );
+	virtual void processRunHeader( lcio::LCRunHeader* pRun );
+	virtual void processEvent( lcio::LCEvent* pEvent );
 	//don't need this
-	//virtual void check( LCEvent* pEvent );
+	//virtual void check( lcio::LCEvent* pEvent );
 	virtual void end();
 protected:
 	std::string _JetCollectionName{};	/**< @internal The name of the collection of ReconstructedParticles that is the jet (comes from the steering file).*/
@@ -109,17 +109,17 @@ protected:
 	bool _passesJetCuts( lcio::ReconstructedParticle* pJet ); ///< @internal A function that contains all the jet cuts - returns true if the event passes all of the cuts, false otherwise.
 
 
-       	void FillTagPlots( LCEvent* pEvent, unsigned int jetNumber );
+       	void FillTagPlots( lcio::LCEvent* pEvent, unsigned int jetNumber );
 
 	void CreateTagPlots();
 
 
-	void CreateFlavourTagInputPlots(LCRunHeader* pRun );
+	void CreateFlavourTagInputPlots(lcio::LCRunHeader* pRun );
 	void CreateFlavourTagTuple();
 	void CalculateIntegralAndBackgroundPlots();
 	void CalculateEfficiencyPurityPlots();
 
-	void FillInputsPlots( LCEvent* pEvent, unsigned int jetNumber );
+	void FillInputsPlots( lcio::LCEvent* pEvent, unsigned int jetNumber );
 
 
 	AIDA::IDataPointSet* CreateEfficiencyPlot(const AIDA::IHistogram1D* pSignal, AIDA::IDataPointSet* pDataPointSet);

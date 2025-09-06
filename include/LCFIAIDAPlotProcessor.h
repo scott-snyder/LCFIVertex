@@ -102,11 +102,11 @@ public:
  
 	virtual void init(); 
  
-	virtual void processRunHeader( LCRunHeader* pRun ); 
+	virtual void processRunHeader( lcio::LCRunHeader* pRun ); 
  
-	virtual void processEvent( LCEvent* pEvent ); 
+	virtual void processEvent( lcio::LCEvent* pEvent ); 
  
-	virtual void check( LCEvent* pEvent ); 
+	virtual void check( lcio::LCEvent* pEvent ); 
  
 	virtual void end(); 
 protected: 
@@ -258,15 +258,15 @@ protected:
 	int _lastRunHeaderProcessed=0;
 	int _suppressOutputForRun=0;
 
-	bool PassesEventCuts( LCEvent* pEvent );
-	bool PassesJetCuts( ReconstructedParticle* pJet );
-	void FillInputsPlots( LCEvent* pEvent, unsigned int jetNumber );
-	void FillTagPlots( LCEvent* pEvent, unsigned int jetNumber );
-	void FillVertexChargePlots( LCEvent* pEvent, unsigned int jetNumber );
-	void FillVertexPlots( LCEvent* pEvent, unsigned int jetNumber );
+	bool PassesEventCuts( lcio::LCEvent* pEvent );
+	bool PassesJetCuts( lcio::ReconstructedParticle* pJet );
+	void FillInputsPlots( lcio::LCEvent* pEvent, unsigned int jetNumber );
+	void FillTagPlots( lcio::LCEvent* pEvent, unsigned int jetNumber );
+	void FillVertexChargePlots( lcio::LCEvent* pEvent, unsigned int jetNumber );
+	void FillVertexPlots( lcio::LCEvent* pEvent, unsigned int jetNumber );
 	void CalculateEfficiencyPurityPlots();
 	void CalculateAdditionalPlots();
-	void CreateFlavourTagInputPlots(LCRunHeader* pRun);
+	void CreateFlavourTagInputPlots(lcio::LCRunHeader* pRun);
 	void CreateFlavourTagTuple();
 	void CreateTagPlots();
 	void CreateAdditionalPlots();
@@ -284,24 +284,24 @@ protected:
 	double CalculateDistance(const double* pos1, const double* pos2);
 
 	//!Finds the true flavour of a jet (uses TrueJetFlavourCollection)
-	int FindTrueJetType( LCEvent* pEvent, unsigned int jetNumber );
+	int FindTrueJetType( lcio::LCEvent* pEvent, unsigned int jetNumber );
 	//!Finds the true charge of the hadron producing a jet (uses TrueJetFlavourCollection)
-	float FindTrueJetHadronCharge(LCEvent* pEvent, unsigned int jetNumber);
+	float FindTrueJetHadronCharge(lcio::LCEvent* pEvent, unsigned int jetNumber);
 	//!Finds the PDG code of the hadron producing a jet (uses TrueJetFlavourCollection)
-	int FindTrueJetPDGCode( LCEvent* pEvent, unsigned int jetNumber );
+	int FindTrueJetPDGCode( lcio::LCEvent* pEvent, unsigned int jetNumber );
 	//!Finds the true charge of the parton producing a jet (uses TrueJetFlavourCollection)
-	float FindTrueJetPartonCharge(LCEvent* pEvent, unsigned int jetNumber);
+	float FindTrueJetPartonCharge(lcio::LCEvent* pEvent, unsigned int jetNumber);
 	//!Finds the true flavour of the jet (uses TrueJetFlavourCollection)
-	int FindTrueJetFlavour(LCEvent* pEvent, unsigned int jetNumber);	
+	int FindTrueJetFlavour(lcio::LCEvent* pEvent, unsigned int jetNumber);	
 	//!Finds the true decay length of the longest b- or c- hadron in a jet
-	void FindTrueJetDecayLength( LCEvent* pEvent, unsigned int jetNumber, std::vector<double>& decaylengthvector, std::vector<double>&  bjetdecaylengthvector, std::vector<double>&  cjetdecaylengthvector);
-	void FindTrueJetDecayLength2( LCEvent* pEvent, unsigned int jetNumber, double& bjetdecaylength, double& cjetdecaylength);
+	void FindTrueJetDecayLength( lcio::LCEvent* pEvent, unsigned int jetNumber, std::vector<double>& decaylengthvector, std::vector<double>&  bjetdecaylengthvector, std::vector<double>&  cjetdecaylengthvector);
+	void FindTrueJetDecayLength2( lcio::LCEvent* pEvent, unsigned int jetNumber, double& bjetdecaylength, double& cjetdecaylength);
 	//!Finds the number of vertices in an event (from the flavour tag inputs)
-	int FindNumVertex( LCEvent* pEvent, unsigned int jetNumber, unsigned int iInputsCollection);
+	int FindNumVertex( lcio::LCEvent* pEvent, unsigned int jetNumber, unsigned int iInputsCollection);
 	//!Finds the vertex charge of the jet - using cuts tuned to find vertex charge for C-jets (from CVertexChargeCollection)
-	int FindCQVtx( LCEvent* pEvent, unsigned int jetNumber);
+	int FindCQVtx( lcio::LCEvent* pEvent, unsigned int jetNumber);
 	//!Finds the vertex charge of the jet - using cuts tuned to find vertex charge for B-jets (from BVertexChargeCollection)
-	int FindBQVtx( LCEvent* pEvent, unsigned int jetNumber);
+	int FindBQVtx( lcio::LCEvent* pEvent, unsigned int jetNumber);
 
 	void CalculateTagEfficiency(const AIDA::IHistogram1D* pSignal,  std::vector<double>& tagEfficiency,  std::vector<double>& tagError);
 	void CalculateTagPurity(const AIDA::IHistogram1D* pSignal, const AIDA::IHistogram1D* pBackground, std::vector<double>& tagPurity, std::vector<double>& tagPurityError);
@@ -310,11 +310,11 @@ protected:
 	
 	int GetPDGFlavour(int code);
 
-	void FillZVRESTable(LCEvent* pEvent);
+	void FillZVRESTable(lcio::LCEvent* pEvent);
 	void PrintNNOutput();
 	void PrintZVRESTable();
 	
-	void InitialiseFlavourTagInputs(LCRunHeader* pRun );
+	void InitialiseFlavourTagInputs(lcio::LCRunHeader* pRun );
 	void InternalVectorInitialisation();
 	
 	//!Makes a DataPointSet of the tag efficiency e.g number of B-jets passing a given B-tag NN cut, as a function of NN

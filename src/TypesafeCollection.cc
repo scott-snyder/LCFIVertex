@@ -1,5 +1,7 @@
 #include "TypesafeCollection.h"
 
+using namespace lcio;
+
 template<>
 bool TypesafeCollection<lcio::ReconstructedParticle>::_checkCollectionType()
 {
