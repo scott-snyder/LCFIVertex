@@ -74,6 +74,8 @@
 
 #include "TypesafeCollection.h"
 
+using namespace lcio;
+
 // There needs to be at least one instantiation for the base constructor to register the processor with 
 // the Marlin processor manager. This is it. 
 LCFIAIDAPlotProcessor aLCFIAIDAPlotProcessor; 
