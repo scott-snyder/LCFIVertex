@@ -1,0 +1,8 @@
+Bottom: 51e87cb9fcd0f89285ebef43a70a6585a0e8f460
+Top:    51e87cb9fcd0f89285ebef43a70a6585a0e8f460
+Author: sss <sss@karma>
+Date:   2025-12-13 11:15:01 -0500
+
+Fix warnings seen with gcc16.
+
+Potentially uninitialized variables.
