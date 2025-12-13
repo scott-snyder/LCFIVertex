@@ -247,7 +247,7 @@ void NeuralNet::buildFromPlainText(const std::string &url,const std::vector<Neur
 		    }
 		}
 
-		int numberOfNeurons;
+		int numberOfNeurons = 0;
 		for (int i=0;i<_numberOfLayers;++i)
 		{
 			NeuronLayer *newLayer = new NeuronLayer(this);
@@ -430,7 +430,7 @@ void NeuralNet::buildFromPlainText(const std::string &url)
 		    }
 		}
 
-		int numberOfNeurons;
+		int numberOfNeurons = 0;
 		for (int i=0;i<_numberOfLayers;++i)
 		{
 			NeuronLayer *newLayer = new NeuronLayer(this);
