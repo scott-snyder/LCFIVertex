@@ -1,6 +1,6 @@
 {
   "version": 5,
-  "prev": "1afc38ec817a3a15ee90fb21303727ea4ec38603",
+  "prev": "cc5ff0be246dca3238ffeab93ad09b143eb88d8c",
   "head": "d4a1993cf693c95a6c5cdcb565d5d797e4286e52",
   "applied": [
     "gitignore",
@@ -10,7 +10,7 @@
     "nosystem",
     "using",
     "gcc16warn",
-    "nan"
+    "isnan2"
   ],
   "unapplied": [],
   "hidden": [],
@@ -27,7 +27,7 @@
     "gitignore": {
       "oid": "4f7991f31d6c8fae25d3cd4dd12c8bafbcd41a5f"
     },
-    "nan": {
+    "isnan2": {
       "oid": "d4a1993cf693c95a6c5cdcb565d5d797e4286e52"
     },
     "nosystem": {
