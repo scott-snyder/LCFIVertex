@@ -2,6 +2,7 @@
 #include "streamlog/streamlog.h"
 
 #include <cstdlib>
+#include <cmath>
 
 #ifdef MARLIN_USE_AIDA
 #include "marlin/AIDAProcessor.h"
@@ -51,7 +52,7 @@ void HistMap::fill(string histname,double val, double weight,
   }
 
   // fill histogram and record any unusual entries (under-/overflow, NaN)
-  if ((val>=0) || (val<0)) {
+  if (!std::isnan(val)) {
     if (_histmap1D[histname]->allEntries()==0) {
       _histmap1D_xmin[histname] = val;
       _histmap1D_xmax[histname] = val;
