@@ -1,8 +1,9 @@
 {
   "version": 5,
-  "prev": "cc5ff0be246dca3238ffeab93ad09b143eb88d8c",
-  "head": "d4a1993cf693c95a6c5cdcb565d5d797e4286e52",
-  "applied": [
+  "prev": "d80c9bfb8e6699858c0ea411f488e9a9fcb569d5",
+  "head": "855b2e54817d744fc804663fc126dbcd520f748a",
+  "applied": [],
+  "unapplied": [
     "gitignore",
     "warn",
     "clang",
@@ -12,7 +13,6 @@
     "gcc16warn",
     "isnan2"
   ],
-  "unapplied": [],
   "hidden": [],
   "patches": {
     "clang": {
