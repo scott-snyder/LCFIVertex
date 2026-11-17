@@ -1,12 +1,10 @@
 {
   "version": 5,
-  "prev": "f03d464cff77b631ab42d0d8b08c9779967c73a2",
-  "head": "eed46600965c82aa2a2290fdae323a7e33d5f0f6",
+  "prev": "74f5ac252e055a2f99b0a5f9889e2c8fc364c08c",
+  "head": "59ba0030464b9265c3dc216d748370c3a92f5e19",
   "applied": [
     "gitignore",
-    "warn"
-  ],
-  "unapplied": [
+    "warn",
     "clang",
     "cmakewarn",
     "nosystem",
@@ -14,28 +12,29 @@
     "gcc16warn",
     "isnan2"
   ],
+  "unapplied": [],
   "hidden": [],
   "patches": {
     "clang": {
-      "oid": "480adda230ac9db91537820734dff23fe61162c5"
+      "oid": "e309fd6cfe1e90ffe1a032bc3f45491d2ac2f3b9"
     },
     "cmakewarn": {
-      "oid": "0c1498accc24687661c5ed3447ca12786a1c18c1"
+      "oid": "1b6ac515f513443413721d47036bb6f2d98894c9"
     },
     "gcc16warn": {
-      "oid": "4b9378c0643b897aceef55026826dd25f6945ef5"
+      "oid": "c7fd9c62371bf469a2e9474ecdaced29580c0ccf"
     },
     "gitignore": {
       "oid": "9eadf12c162f897490a345d53eb7c024fed642e9"
     },
     "isnan2": {
-      "oid": "d4a1993cf693c95a6c5cdcb565d5d797e4286e52"
+      "oid": "59ba0030464b9265c3dc216d748370c3a92f5e19"
     },
     "nosystem": {
-      "oid": "e50115cc7ec72898dca6acb1ce6350fb05bd59fd"
+      "oid": "7722a1abcb00afd65aa1c6a3312ff305625ca6f1"
     },
     "using": {
-      "oid": "39a2db934930c8f486e2fe5e587ad375a75366a5"
+      "oid": "d5159f7aa2bbe9e129eee117df670bdd7022e112"
     },
     "warn": {
       "oid": "eed46600965c82aa2a2290fdae323a7e33d5f0f6"
